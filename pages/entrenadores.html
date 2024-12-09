@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Responsive HTML Admin Dashboard Template based on Bootstrap 5">
+  <meta name="author" content="NobleUI">
+  <meta name="keywords" content="nobleui, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+  <title>Administrador de Gimnasio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- End fonts -->
+
+  <!-- core:css -->
+  <link rel="stylesheet" href="../vendors/core/core.css">
+  <link rel="stylesheet" href="../vendors/datatables.net-bs5/dataTables.bootstrap5.css">
+  <!-- Font Awesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- endinject -->
+
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../fonts/feather-font/css/iconfont.css">
+  <link rel="stylesheet" href="../vendors/flag-icon-css/css/flag-icon.min.css">
+  <!-- endinject -->
+
+  <!-- Layout styles -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/custom.css">
+  <!-- End layout styles -->
+
+  <link rel="shortcut icon" href="../images/favicon.png" />
+</head>
+<body>
+  <div class="main-wrapper">
+
+    <!-- Navbar -->
+    <div class="horizontal-menu">
+      <nav class="navbar top-navbar">
+        <div class="container">
+          <div class="navbar-content">
+            <a href="/" class="navbar-brand">
+              <span>Administrador de Gimnasio</span>
+            </a>
+            <ul class="navbar-nav">
+              <!-- Add navbar items here if needed -->
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="horizontal-menu-toggle">
+              <i data-feather="menu"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <nav class="bottom-navbar">
+        <div class="container">
+          <ul class="nav page-navigation">
+            <li class="nav-item">
+              <a href="/" class="nav-link">
+                <i class="link-icon" data-feather="home"></i>
+                <span class="menu-title">Inicio</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- End Navbar -->
+
+    <div class="page-wrapper">
+
+      <div class="page-content">
+
+        <nav class="page-breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Administración</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Entrenadores</li>
+          </ol>
+        </nav>
+
+        <div class="row d-flex mb-4">
+          <div class="card">
+            <div class="card-body">
+              <button type="button" class="btn btn-primary mb-3">Agregar Entrenador</button>
+              <h6 class="card-title">Entrenadores</h6>
+              <div class="table-responsive">
+                <table id="entrenadoresTable" class="table">
+                  <thead>
+                    <tr>
+                      <th>Nombre</th>
+                      <th>Especialidad</th>
+                      <th>Correo</th>
+                      <th>Teléfono</th>
+                      <th>Estado</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Contenido dinámico aquí -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer border-top">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between py-3 small">
+          <p class="text-muted mb-1 mb-md-0">Copyright © 2022 <a href="https://www.nobleui.com" target="_blank">NobleUI</a>.</p>
+          <p class="text-muted">Handcrafted with <i class="mb-1 text-primary ms-1 icon-sm" data-feather="heart"></i></p>
+        </div>
+      </footer>
+      <!-- End Footer -->
+
+    </div>
+  </div>
+
+  <!-- core:js -->
+  <script src="../vendors/core/core.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script src="../js/template.js"></script>
+
+  <!-- DataTables -->
+  <script src="../vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="../vendors/datatables.net-bs5/dataTables.bootstrap5.js"></script>
+
+  <!-- Custom Script -->
+  <script src="../scripts/entrenador.js"></script>
+</body>
+</html>

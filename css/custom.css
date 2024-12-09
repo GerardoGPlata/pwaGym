@@ -1,0 +1,10 @@
+/* Cambiar el cursor y resaltar las filas al pasar el mouse */
+#clasesTable tbody tr {
+    cursor: pointer;
+  }
+  
+  /* Color de fondo ligeramente más oscuro que el color base */
+  #clasesTable tbody tr:hover {
+    background-color: #656fec; /* Gris suave */
+  }
+  

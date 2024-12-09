@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--
+Template Name: NobleUI - HTML Bootstrap 5 Admin Dashboard Template
+Author: NobleUI
+Website: https://www.nobleui.com
+Portfolio: https://themeforest.net/user/nobleui/portfolio
+Contact: nobleui123@gmail.com
+Purchase: https://1.envato.market/nobleui_admin
+License: For each use you must have a valid license purchased only from above link in order to legally use the theme for your project.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Responsive HTML Admin Dashboard Template based on Bootstrap 5">
+  <meta name="author" content="NobleUI">
+  <meta name="keywords" content="nobleui, bootstrap, bootstrap 5, bootstrap5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+  <title>Administrador de Gimnasio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- End fonts -->
+
+  <!-- core:css -->
+  <link rel="stylesheet" href="./vendors/core/core.css">
+  <!-- endinject -->
+
+  <!-- Plugin css for this page -->
+  <!-- End plugin css for this page -->
+
+  <!-- inject:css -->
+  <link rel="stylesheet" href="./fonts/feather-font/css/iconfont.css">
+  <link rel="stylesheet" href="./vendors/flag-icon-css/css/flag-icon.min.css">
+  <!-- endinject -->
+
+  <!-- Layout styles -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- End layout styles -->
+
+  <link rel="shortcut icon" href="./images/favicon.png" />
+</head>
+<body>
+  <div class="main-wrapper">
+
+    <!-- partial:../../partials/_navbar.html -->
+    <div class="horizontal-menu">
+      <nav class="navbar top-navbar">
+        <div class="container">
+          <div class="navbar-content">
+            <a href="/" class="navbar-brand">
+              <span>Administrador de Gimnasio</span>
+            </a>
+            <ul class="navbar-nav">
+              <!-- Add navbar items here if needed -->
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="horizontal-menu-toggle">
+              <i data-feather="menu"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <nav class="bottom-navbar">
+        <div class="container">
+          <ul class="nav page-navigation">
+            <li class="nav-item">
+              <a href="/"  class="nav-link">
+                <i class="link-icon" data-feather="home"></i>
+                <span class="menu-title">Inicio</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- partial -->
+
+    <div class="page-wrapper">
+
+      <div class="page-content">
+
+        <nav class="page-breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Administración</a></li>
+            <li class="breadcrumb-item active" aria-current="page">General</li>
+          </ol>
+        </nav>
+        <div class="row d-flex mb-4">
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Membresías
+                </div>
+                <div class="card-body">
+                  <p class="card-text mb-3">Administra las membresías de los clientes. Puedes agregar nuevas membresías, renovarlas o cancelar las existentes.</p>
+                  <a href="/pages/membresias.html" class="card-link">Gestionar Membresías</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Entrenadores
+                </div>
+                <div class="card-body">
+                  <p class="card-text mb-3">Administra la información de los entrenadores. Asigna horarios, gestiona especialidades y consulta su disponibilidad.</p>
+                  <a href="./pages/entrenadores.html" class="card-link">Ver Entrenadores</a>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row d-flex mb-4">
+          <!-- Add content for rows here -->
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                Horarios
+              </div>
+              <div class="card-body">
+                <p class="card-text mb-3">Configura y administra los horarios del gimnasio. Asigna clases, controla disponibilidad y ajusta los tiempos según sea necesario.</p>
+                <a href="#" class="card-link">Configurar Horarios</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                Clases
+              </div>
+              <div class="card-body">
+                <p class="card-text mb-3">Gestiona las clases que ofrece el gimnasio. Crea nuevas clases, actualiza horarios y registra la asistencia de los clientes.</p>
+                <a href="./pages/clases.html" class="card-link">Administrar Clases</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- partial:../../partials/_footer.html -->
+      <footer class="footer border-top">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between py-3 small">
+          <p class="text-muted mb-1 mb-md-0">Copyright © 2022 <a href="https://www.nobleui.com" target="_blank">NobleUI</a>.</p>
+          <p class="text-muted">Handcrafted with <i class="mb-1 text-primary ms-1 icon-sm" data-feather="heart"></i></p>
+        </div>
+      </footer>
+      <!-- partial -->
+
+    </div>
+  </div>
+
+  <!-- core:js -->
+  <script src="./vendors/core/core.js"></script>
+  <!-- endinject -->
+
+  <!-- Plugin js for this page -->
+  <!-- End plugin js for this page -->
+
+  <!-- inject:js -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script src="./js/template.js"></script>
+  <!-- endinject -->
+
+  <!-- Custom js for this page -->
+  <!-- End custom js for this page -->
+
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>
