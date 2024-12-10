@@ -1,0 +1,19 @@
+{
+  "name": "Administrador de Gimnasio",
+  "short_name": "Gimnasio",
+  "description": "Aplicación para la gestión de un gimnasio: usuarios, entrenadores, clases y más.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007bff",
+  "icons": [
+    {
+      "src": "./img/mancuerna-de-biceps.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": ["fitness", "health", "administration"]
+}
