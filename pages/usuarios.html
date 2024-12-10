@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Responsive HTML Admin Dashboard Template based on Bootstrap 5">
+  <meta name="author" content="NobleUI">
+  <meta name="keywords" content="nobleui, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+  <title>Administrador de Gimnasio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- End fonts -->
+
+  <!-- core:css -->
+  <link rel="stylesheet" href="../vendors/core/core.css">
+  <link rel="stylesheet" href="../vendors/datatables.net-bs5/dataTables.bootstrap5.css">
+  <!-- Font Awesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- endinject -->
+
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../fonts/feather-font/css/iconfont.css">
+  <link rel="stylesheet" href="../vendors/flag-icon-css/css/flag-icon.min.css">
+  <!-- endinject -->
+
+  <!-- Layout styles -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/custom.css">
+  <!-- End layout styles -->
+
+  <link rel="shortcut icon" href="../images/favicon.png" />
+</head>
+<body>
+  <div class="main-wrapper">
+
+    <!-- Navbar -->
+    <div class="horizontal-menu">
+      <nav class="navbar top-navbar">
+        <div class="container">
+          <div class="navbar-content">
+            <a href="/" class="navbar-brand">
+              <span>Administrador de Gimnasio</span>
+            </a>
+            <ul class="navbar-nav">
+              <!-- Add navbar items here if needed -->
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="horizontal-menu-toggle">
+              <i data-feather="menu"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <nav class="bottom-navbar">
+        <div class="container">
+          <ul class="nav page-navigation">
+            <li class="nav-item">
+              <a href="/" class="nav-link">
+                <i class="link-icon" data-feather="home"></i>
+                <span class="menu-title">Inicio</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- End Navbar -->
+
+    <div class="page-wrapper">
+
+      <div class="page-content">
+
+        <nav class="page-breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Administración</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Usuarios</li>
+          </ol>
+        </nav>
+
+        <div class="row d-flex mb-4">
+          <div class="card">
+            <div class="card-body">
+              <button type="button" class="btn btn-primary mb-3">Agregar Usuario</button>
+              <h6 class="card-title">Usuarios</h6>
+              <div class="table-responsive">
+                <table id="usuariosTable" class="table">
+                  <thead>
+                    <tr>
+                      <th>Nombre</th>
+                      <th>Correo</th>
+                      <th>Teléfono</th>
+                      <th>Fecha de Nacimiento</th>
+                      <th>Estado</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Contenido dinámico aquí -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal para agregar usuarios -->
+    <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="addUserModalLabel">Agregar Usuario</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <form id="addUserForm">
+            <div class="modal-body">
+                <div class="mb-3">
+                <label for="userName" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="userName" name="name" required maxlength="20" placeholder="Nombre del usuario">
+                </div>
+                <div class="mb-3">
+                <label for="userEmail" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="userEmail" name="email" required placeholder="ejemplo@correo.com">
+                </div>
+                <div class="mb-3">
+                <label for="userPassword" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="userPassword" name="password" required minlength="4" placeholder="Contraseña (mínimo 4 caracteres)">
+                </div>
+                <div class="mb-3">
+                <label for="userPhone" class="form-label">Teléfono</label>
+                <input type="text" class="form-control" id="userPhone" name="phone" required minlength="10" maxlength="10" placeholder="Número de teléfono (10 dígitos)">
+                </div>
+                <div class="mb-3">
+                <label for="userBirthDate" class="form-label">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" id="userBirthDate" name="birth_date" required>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" id="submitButton" class="btn btn-success">Guardar Usuario</button>
+            </div>
+            </form>
+        </div>
+        </div>
+    </div>
+  
+
+      <!-- Footer -->
+      <footer class="footer border-top">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between py-3 small">
+          <p class="text-muted mb-1 mb-md-0">Copyright © 2022 <a href="https://www.nobleui.com" target="_blank">NobleUI</a>.</p>
+          <p class="text-muted">Handcrafted with <i class="mb-1 text-primary ms-1 icon-sm" data-feather="heart"></i></p>
+        </div>
+      </footer>
+      <!-- End Footer -->
+
+    </div>
+  </div>
+
+  <!-- core:js -->
+  <script src="../vendors/core/core.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script src="../js/template.js"></script>
+
+  <!-- DataTables -->
+  <script src="../vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="../vendors/datatables.net-bs5/dataTables.bootstrap5.js"></script>
+
+  <!-- Custom Script -->
+  <script src="../scripts/usuario.js"></script>
+</body>
+</html>
